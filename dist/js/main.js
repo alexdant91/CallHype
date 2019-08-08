@@ -1,48 +1,6 @@
 $(document).ready(function () {
 
-    /**
-     * SECTION Constants
-     */
 
-    const $document = $(this);
-    const $body = $('body');
-    const $nav = $body.find('nav.navbar');
-
-    /**
-     * SECTION Functions
-     */
-
-    /** NOTE appearNavbar(scrollHeight)
-     * Show | Hide -> Navbar based on page scrollTop
-     * @param {int} scrollHeight
-     */
-    const appearNavbar = (scrollHeight) => {
-        if (scrollHeight >= 120) {
-            $nav.addClass('appear');
-            $nav.css('margin-top', '100px');
-        } else {
-            $nav.attr('style', false);
-            $nav.removeClass('appear');
-        }
-    }
-
-    /**
-     * SECTION Listeners
-     */
-
-    /** NOTE Event listener
-     * Listen for @scroll event and fire: 
-     * @function appearNavbar(<int>scrollHeight)
-     */
-    $document.on('scroll', function () {
-        const $this = $(this);
-        let navScrollTop = $this.scrollTop();
-        appearNavbar(navScrollTop);
-    });
-
-    const $ulNav = $('ul.nav');
-
-    scrollSpy($ulNav, 100);
 
 });
 
