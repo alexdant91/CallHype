@@ -1,5 +1,6 @@
 :root {
     --primary-color: #0D36BE;
+    --header-height: 750px;
 }
 
 nav.navbar {
@@ -20,6 +21,292 @@ svg.bottom-bg {
 
 header {
     background-color: var(--primary-color);
-    height: 100vh;
+    height: var(--header-height);
     width: 100vw;
+}
+
+nav.navbar-transparent {
+    color: white;
+    background: transparent;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+}
+
+nav.navbar-transparent a {
+    color: white !important;
+}
+
+.bg-wave {
+    height: 100%;
+    width: 100vw;
+    background-image: url(../img/wave-bg.png);
+    background-position-y: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bg-gradient {
+    background: var(--primary-color);
+    background: -moz-linear-gradient(top, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, var(--primary-color)), color-stop(39%, rgba(47, 80, 181, 1)), color-stop(100%, rgba(72, 104, 199, 1)));
+    background: -webkit-linear-gradient(top, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%);
+    background: -o-linear-gradient(top, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%);
+    background: -ms-linear-gradient(top, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%);
+    background: linear-gradient(to bottom, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1339b7', endColorstr='#4868c7', GradientType=0);
+}
+
+.bg-wrapper {
+    background-position: 50% 100%;
+    bottom: 0px;
+    color: white;
+    height: 100%;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 1680px;
+    column-rule-color: white;
+    perspective-origin: 840px 399px;
+    transform-origin: 840px 399px;
+    caret-color: white;
+    /* background: rgba(0, 0, 0, 0) url("https://truepill.com/images/herobg-min.png") no-repeat scroll 50% 100% / cover padding-box border-box; */
+    border: 0px none white;
+    font: normal normal 400 normal 15px / 24px Poppins;
+    outline: white none 0px;
+    overflow: hidden;
+}
+
+.bg-wrapper:after {
+    color: white;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    column-rule-color: white;
+    caret-color: white;
+    border: 0px none white;
+    outline: white none 0px;
+    font: normal normal 400 normal 15px / 24px Poppins;
+}
+
+.bg-wrapper:before {
+    color: white;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    column-rule-color: white;
+    caret-color: white;
+    border: 0px none white;
+    outline: white none 0px;
+    font: normal normal 400 normal 15px / 24px Poppins;
+}
+
+.box-1 {
+    bottom: -82px;
+    color: white;
+    height: 580px;
+    left: 1250px;
+    opacity: 0.09;
+    position: absolute;
+    right: -150px;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    top: 300px;
+    width: 580px;
+    z-index: 1000;
+    column-rule-color: white;
+    perspective-origin: 290px 290px;
+    transform: matrix(0.913545, 0.406737, -0.406737, 0.913545, -12.148, 230.37);
+    transform-origin: 290px 290px;
+    caret-color: white;
+    background: rgba(0, 0, 0, 0) linear-gradient(-239deg, white 0%, rgba(255, 255, 255, 0) 52%) repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none white;
+    border-radius: 100px 100px 100px 100px;
+    font: normal normal 400 normal 15px / 24px Poppins;
+    outline: white none 0px;
+    overflow: hidden;
+}
+
+.box-1:after {
+    color: white;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    column-rule-color: white;
+    caret-color: white;
+    border: 0px none white;
+    font: normal normal 400 normal 15px / 24px Poppins;
+    outline: white none 0px;
+}
+
+.box-1:before {
+    color: white;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    column-rule-color: white;
+    caret-color: white;
+    border: 0px none white;
+    font: normal normal 400 normal 15px / 24px Poppins;
+    outline: white none 0px;
+}
+
+.box-2 {
+    bottom: -282px;
+    box-shadow: rgba(0, 0, 0, 0.03) 40px 20px 100px 0px;
+    color: white;
+    height: 680px;
+    left: 1270px;
+    opacity: 0.12;
+    position: absolute;
+    right: -270px;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    top: 400px;
+    width: 680px;
+    z-index: 1001;
+    column-rule-color: white;
+    perspective-origin: 340px 340px;
+    transform: matrix(0.913545, 0.406737, -0.406737, 0.913545, -12.148, 230.37);
+    transform-origin: 340px 340px;
+    caret-color: white;
+    background: rgba(0, 0, 0, 0) linear-gradient(-239deg, white 0%, rgba(255, 255, 255, 0) 52%) repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none white;
+    border-radius: 100px 100px 100px 100px;
+    font: normal normal 400 normal 15px / 24px Poppins;
+    outline: white none 0px;
+    overflow: hidden;
+}
+
+.box-2:after {
+    color: white;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    column-rule-color: white;
+    caret-color: white;
+    border: 0px none white;
+    font: normal normal 400 normal 15px / 24px Poppins;
+    outline: white none 0px;
+}
+
+.box-2:before {
+    color: white;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    column-rule-color: white;
+    caret-color: white;
+    border: 0px none white;
+    font: normal normal 400 normal 15px / 24px Poppins;
+    outline: white none 0px;
+}
+
+.box-3 {
+    bottom: 268px;
+    color: white;
+    height: 480px;
+    left: -100px;
+    opacity: 0.09;
+    position: absolute;
+    right: 1300px;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    top: 50px;
+    width: 480px;
+    z-index: 1000;
+    column-rule-color: white;
+    perspective-origin: 240px 240px;
+    transform: matrix(0.470041, 0.882644, -0.882644, 0.470041, -12.148, 230.37);
+    transform-origin: 240px 240px;
+    caret-color: white;
+    background: rgba(0, 0, 0, 0) linear-gradient(-239deg, white 0%, rgba(255, 255, 255, 0) 52%) repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none white;
+    border-radius: 100px 100px 100px 100px;
+    font: normal normal 400 normal 15px / 24px Poppins;
+    outline: white none 0px;
+    overflow: hidden;
+}
+
+.box-3:after {
+    color: white;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    column-rule-color: white;
+    caret-color: white;
+    border: 0px none white;
+    font: normal normal 400 normal 15px / 24px Poppins;
+    outline: white none 0px;
+}
+
+.box-3:before {
+    color: white;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    column-rule-color: white;
+    caret-color: white;
+    border: 0px none white;
+    font: normal normal 400 normal 15px / 24px Poppins;
+    outline: white none 0px;
+}
+
+.box-4 {
+    bottom: 68px;
+    box-shadow: rgba(0, 0, 0, 0.03) 40px 20px 100px 0px;
+    color: white;
+    height: 580px;
+    left: -150px;
+    opacity: 0.12;
+    position: absolute;
+    right: 1250px;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    top: 150px;
+    width: 580px;
+    z-index: 1001;
+    column-rule-color: white;
+    perspective-origin: 290px 290px;
+    transform: matrix(0.359573, 0.933117, -0.933117, 0.359573, -12.148, 230.37);
+    transform-origin: 290px 290px;
+    caret-color: white;
+    background: rgba(0, 0, 0, 0) linear-gradient(-239deg, white 0%, rgba(255, 255, 255, 0) 52%) repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none white;
+    border-radius: 100px 100px 100px 100px;
+    font: normal normal 400 normal 15px / 24px Poppins;
+    outline: white none 0px;
+    overflow: hidden;
+}
+
+.box-4:after {
+    color: white;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    column-rule-color: white;
+    caret-color: white;
+    border: 0px none white;
+    font: normal normal 400 normal 15px / 24px Poppins;
+    outline: white none 0px;
+}
+
+.box-4:before {
+    color: white;
+    text-align: center;
+    text-decoration: none solid white;
+    text-size-adjust: 100%;
+    column-rule-color: white;
+    caret-color: white;
+    border: 0px none white;
+    font: normal normal 400 normal 15px / 24px Poppins;
+    outline: white none 0px;
 }
