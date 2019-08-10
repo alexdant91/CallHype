@@ -66,7 +66,7 @@ header {
 
 header .header-title {
     width: 600px;
-    z-index: 999;
+    z-index: 99;
     max-width: 90%;
     position: relative;
 }
@@ -227,7 +227,7 @@ nav.navbar-transparent a {
     text-size-adjust: 100%;
     top: 300px;
     width: 580px;
-    z-index: 1000;
+    z-index: 9;
     column-rule-color: white;
     perspective-origin: 290px 290px;
     transform: matrix(0.913545, 0.406737, -0.406737, 0.913545, -12.148, 230.37);
@@ -279,7 +279,7 @@ nav.navbar-transparent a {
     text-size-adjust: 100%;
     top: 400px;
     width: 680px;
-    z-index: 1001;
+    z-index: 9;
     column-rule-color: white;
     perspective-origin: 340px 340px;
     transform: matrix(0.913545, 0.406737, -0.406737, 0.913545, -12.148, 230.37);
@@ -330,7 +330,7 @@ nav.navbar-transparent a {
     text-size-adjust: 100%;
     top: 50px;
     width: 480px;
-    z-index: 1000;
+    z-index: 9;
     column-rule-color: white;
     perspective-origin: 240px 240px;
     transform: matrix(0.470041, 0.882644, -0.882644, 0.470041, -12.148, 230.37);
@@ -382,7 +382,7 @@ nav.navbar-transparent a {
     text-size-adjust: 100%;
     top: 150px;
     width: 580px;
-    z-index: 1001;
+    z-index: 9;
     column-rule-color: white;
     perspective-origin: 290px 290px;
     transform: matrix(0.359573, 0.933117, -0.933117, 0.359573, -12.148, 230.37);
