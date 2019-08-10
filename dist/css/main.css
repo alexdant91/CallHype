@@ -40,6 +40,7 @@ svg.bottom-bg {
 
 .relative {
     position: relative;
+    z-index: 998
 }
 
 .absolute {
