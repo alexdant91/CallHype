@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 :root {
     --primary-color: #0D36BE;
     --header-height: 750px;
+}
+
+html,
+body {
+    font-family: 'Poppins', sans-serif !important;
 }
 
 nav.navbar {
@@ -19,10 +26,65 @@ svg.bottom-bg {
     height: 100px;
 }
 
+.centered {
+    display: block;
+    margin: auto;
+    margin-top: 250px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-bolder {
+    font-weight: 900;
+}
+
+.animateOnScreen {
+    display: block;
+    opacity: 0;
+}
+
 header {
     background-color: var(--primary-color);
     height: var(--header-height);
     width: 100vw;
+}
+
+header .header-title {
+    width: 600px;
+    z-index: 999;
+    max-width: 90%;
+    position: relative;
+}
+
+header .header-title h1 {
+    font-size: 3.4rem;
+    line-height: 54px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: 25px !important;
+}
+
+header .header-title h3 {
+    font-size: 1.8rem;
+    line-height: 36px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: -1px;
 }
 
 nav.navbar-transparent {
@@ -37,23 +99,52 @@ nav.navbar-transparent a {
     color: white !important;
 }
 
+.nav.navbar-nav li a {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 767px) {
+    .nav.navbar-nav li a {
+        color: #37517e !important;
+    }
+}
+
+.navbar-toggle span.icon-bar {
+    background: #fff;
+}
+
 .bg-wave {
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100vw;
+    position: absolute;
     background-image: url(../img/wave-bg.png);
     background-position-y: bottom;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
+.bg-wave-inverse {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    background-image: url(../img/wave-bg-blue.png);
+    background-position-y: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .bg-gradient {
-    background: var(--primary-color);
-    background: -moz-linear-gradient(top, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, var(--primary-color)), color-stop(39%, rgba(47, 80, 181, 1)), color-stop(100%, rgba(72, 104, 199, 1)));
-    background: -webkit-linear-gradient(top, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%);
-    background: -o-linear-gradient(top, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%);
-    background: -ms-linear-gradient(top, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%);
-    background: linear-gradient(to bottom, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%);
+    background: var(--primary-color) !important;
+    background: -moz-linear-gradient(top, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%) !important;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, var(--primary-color)), color-stop(39%, rgba(47, 80, 181, 1)), color-stop(100%, rgba(72, 104, 199, 1))) !important;
+    background: -webkit-linear-gradient(top, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%) !important;
+    background: -o-linear-gradient(top, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%) !important;
+    background: -ms-linear-gradient(top, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%) !important;
+    background: linear-gradient(to bottom, var(--primary-color) 0%, rgba(47, 80, 181, 1) 39%, rgba(72, 104, 199, 1) 100%) !important;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1339b7', endColorstr='#4868c7', GradientType=0);
 }
 
@@ -69,12 +160,11 @@ nav.navbar-transparent a {
     text-decoration: none solid white;
     text-size-adjust: 100%;
     top: 0px;
-    width: 1680px;
+    width: 100vw;
     column-rule-color: white;
     perspective-origin: 840px 399px;
     transform-origin: 840px 399px;
     caret-color: white;
-    /* background: rgba(0, 0, 0, 0) url("https://truepill.com/images/herobg-min.png") no-repeat scroll 50% 100% / cover padding-box border-box; */
     border: 0px none white;
     font: normal normal 400 normal 15px / 24px Poppins;
     outline: white none 0px;
@@ -110,7 +200,7 @@ nav.navbar-transparent a {
     color: white;
     height: 580px;
     left: 1250px;
-    opacity: 0.09;
+    opacity: 0;
     position: absolute;
     right: -150px;
     text-align: center;
@@ -124,7 +214,7 @@ nav.navbar-transparent a {
     transform: matrix(0.913545, 0.406737, -0.406737, 0.913545, -12.148, 230.37);
     transform-origin: 290px 290px;
     caret-color: white;
-    background: rgba(0, 0, 0, 0) linear-gradient(-239deg, white 0%, rgba(255, 255, 255, 0) 52%) repeat scroll 0% 0% / auto padding-box border-box;
+    background: rgba(0, 0, 0, 0) linear-gradient(-239deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0) 52%) repeat scroll 0% 0% / auto padding-box border-box;
     border: 0px none white;
     border-radius: 100px 100px 100px 100px;
     font: normal normal 400 normal 15px / 24px Poppins;
@@ -162,7 +252,7 @@ nav.navbar-transparent a {
     color: white;
     height: 680px;
     left: 1270px;
-    opacity: 0.12;
+    opacity: 0;
     position: absolute;
     right: -270px;
     text-align: center;
@@ -176,7 +266,7 @@ nav.navbar-transparent a {
     transform: matrix(0.913545, 0.406737, -0.406737, 0.913545, -12.148, 230.37);
     transform-origin: 340px 340px;
     caret-color: white;
-    background: rgba(0, 0, 0, 0) linear-gradient(-239deg, white 0%, rgba(255, 255, 255, 0) 52%) repeat scroll 0% 0% / auto padding-box border-box;
+    background: rgba(0, 0, 0, 0) linear-gradient(-239deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 52%) repeat scroll 0% 0% / auto padding-box border-box;
     border: 0px none white;
     border-radius: 100px 100px 100px 100px;
     font: normal normal 400 normal 15px / 24px Poppins;
@@ -213,7 +303,7 @@ nav.navbar-transparent a {
     color: white;
     height: 480px;
     left: -100px;
-    opacity: 0.09;
+    opacity: 0;
     position: absolute;
     right: 1300px;
     text-align: center;
@@ -227,7 +317,7 @@ nav.navbar-transparent a {
     transform: matrix(0.470041, 0.882644, -0.882644, 0.470041, -12.148, 230.37);
     transform-origin: 240px 240px;
     caret-color: white;
-    background: rgba(0, 0, 0, 0) linear-gradient(-239deg, white 0%, rgba(255, 255, 255, 0) 52%) repeat scroll 0% 0% / auto padding-box border-box;
+    background: rgba(0, 0, 0, 0) linear-gradient(-239deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0) 52%) repeat scroll 0% 0% / auto padding-box border-box;
     border: 0px none white;
     border-radius: 100px 100px 100px 100px;
     font: normal normal 400 normal 15px / 24px Poppins;
@@ -265,7 +355,7 @@ nav.navbar-transparent a {
     color: white;
     height: 580px;
     left: -150px;
-    opacity: 0.12;
+    opacity: 0;
     position: absolute;
     right: 1250px;
     text-align: center;
@@ -279,7 +369,7 @@ nav.navbar-transparent a {
     transform: matrix(0.359573, 0.933117, -0.933117, 0.359573, -12.148, 230.37);
     transform-origin: 290px 290px;
     caret-color: white;
-    background: rgba(0, 0, 0, 0) linear-gradient(-239deg, white 0%, rgba(255, 255, 255, 0) 52%) repeat scroll 0% 0% / auto padding-box border-box;
+    background: rgba(0, 0, 0, 0) linear-gradient(-239deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 52%) repeat scroll 0% 0% / auto padding-box border-box;
     border: 0px none white;
     border-radius: 100px 100px 100px 100px;
     font: normal normal 400 normal 15px / 24px Poppins;
@@ -309,4 +399,150 @@ nav.navbar-transparent a {
     border: 0px none white;
     font: normal normal 400 normal 15px / 24px Poppins;
     outline: white none 0px;
+}
+
+.hoverMeTop:after {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    display: block;
+    content: '';
+    transition: width 0.5s ease-in-out;
+}
+
+.hoverMeTop:hover:after {
+    width: 100%;
+}
+
+.hoverMebottom:after {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 0;
+    height: 2px;
+    background: white;
+    display: block;
+    content: '';
+    transition: width 0.5s ease-in-out;
+}
+
+.hoverMebottom:hover:after {
+    width: 100%;
+}
+
+.hoverMeleft:after {
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    width: 2px;
+    height: 0;
+    background: white;
+    display: block;
+    content: '';
+    transition: height 0.5s ease-in-out;
+}
+
+.hoverMeleft:hover:after {
+    height: 100%;
+}
+
+.hoverMeRight:after {
+    position: absolute;
+    top: 0%;
+    right: 100%;
+    width: 2px;
+    height: 0;
+    background: white;
+    display: block;
+    content: '';
+    transition: height 0.5s ease-in-out;
+}
+
+.hoverMeRight:hover:after {
+    height: 100%;
+}
+
+.btn-cta {
+    margin-top: 25px;
+    border-radius: 50px;
+    background: #232D3F;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 24px;
+    padding: 12px 24px;
+}
+
+.btn-cta:hover {
+    color: white;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    font-size: 3.4rem;
+    line-height: 52px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin: 25px 0 40px 0 !important;
+}
+
+section#about-us img {
+    height: auto;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+section#about-us p {
+    padding: 25px 35px 0 35px;
+    font-size: 20px;
+    line-height: 34px;
+}
+
+.centered-box {
+    height: auto;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.last-section {
+    padding-bottom: 250px;
+}
+
+.footer {
+    padding-top: 50px !important;
+    padding-bottom: 25px !important;
+}
+
+.footer .tiny {
+    color: white !important;
+}
+
+.logo.logo-3 {
+    background-image: url(../img/logo_white_tx_md.png);
+    background-position: center, center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+form#contact-us {
+    position: relative;
+    padding: 35px 50px;
+    width: 80%;
+    display: block;
+    margin: auto;
+    border: 1px solid #c8c9ca;
+    border-radius: 25px;
+    background: #d3d3d312;
 }
