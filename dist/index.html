@@ -80,13 +80,13 @@
 
         <!-- SECTION About us -->
         <section id="about-us">
-            <div class="row animateOnScreen">
+            <div class="row animateOnScreen" data-offset="-50">
                 <div class="container">
                     <h2 class="text-center">About us</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="container animateOnScreen">
+                <div class="container animateOnScreen" data-offset="-50">
                     <div class="col-lg-6">
                         <div class="">
                             <p>We are an emerging customer aquisition platform that only is successful when you are successful.
@@ -105,14 +105,14 @@
 
         <!-- SECTION Contact us -->
         <section id="contact-us" class="last-section relative">
-            <div class="row animateOnScreen">
+            <div class="row animateOnScreen" data-offset="150">
                 <div class="container">
                     <h2 class="text-center" style="margin-bottom: 0 !important;">Contact us</h2>
                     <p class="text-center" style="margin-bottom: 60px;">Claim 90$ in call credits</p>
                 </div>
             </div>
             <div class="row relative" style="z-index: 999;">
-                <div class="container animateOnScreen">
+                <div class="container animateOnScreen" data-offset="150">
                     <div class="boxed-center">
                         <!-- NOTE Set your custom form action -->
                         <form id="contact-us" action="" method="POST">
@@ -133,45 +133,9 @@
                                     <label for="phone">Phone</label>
                                     <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" />
                                 </div>
-                                <div class="form-group col-lg-6">
-                                    <!-- <label>Term Life Insurance</label> -->
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="insurance" id="term-life-insurance" vlaue="term-life-insurance"> Term Life Insurance
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group col-lg-6">
-                                    <!-- <label>Health Insurance</label> -->
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="insurance" id="health-insurance" vlaue="health-insurance"> Health Insurance
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group col-lg-6">
-                                    <!-- <label>Auto Insurance</label> -->
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="insurance" id="auto-insurance" vlaue="auto-insurance"> Auto Insurance
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group col-lg-6">
-                                    <!-- <label>Final Expense Insurance</label> -->
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="insurance" id="final-expense-insurance" vlaue="final-expense-insurance"> Final Expense Insurance
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group col-lg-6">
-                                    <!-- <label>Medical Supp Insurance</label> -->
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="insurance" id="medical-supp-insurance" vlaue="medical-supp-insurance"> Medical Supp Insurance
-                                        </label>
-                                    </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Type your message here"></textarea>
                                 </div>
                             </div>
                             <div class="row">
