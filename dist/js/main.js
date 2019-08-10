@@ -1,13 +1,15 @@
 $(document).ready(function () {
-    // CONFIGURATION
+    // SECTION Configuration parameters
     const _url = "";
     const _method = "POST"
 
-    // INIT
+    // SECTION Init functions
     onScreen('animateOnScreen', 'fadeInDown');
 
-    // Const elements
+    // SECTION Const elements
     const $contactUs = $('#contact-us');
+
+    // SECTION Contact form
     $contactUs.on('submit', function () {
         const data = new FormData(this);
         $.ajax({
@@ -28,6 +30,7 @@ $(document).ready(function () {
 
 });
 
+// SECTION Functions
 const scrollSpy = ($target, offset = 0) => {
     let lastElemId = '';
     $('[scrollspy]').each(function () {

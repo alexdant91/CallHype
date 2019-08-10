@@ -44,13 +44,16 @@
                     <div class="navbar-collapse-panel">
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="#home" class="active hoverMebottom">Home</a>
+                                <a href="#home" class="active smoothScroll  hoverMebottom">Home</a>
                             </li>
                             <li>
-                                <a href="#about-us" class="hoverMebottom">About us</a>
+                                <a href="#about-us" class="smoothScroll hoverMebottom">About us</a>
                             </li>
                             <li>
-                                <a href="#contact-us" class="hoverMebottom">Contact us</a>
+                                <a href="#pricing" class="smoothScroll hoverMebottom">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="#contact-us" class="smoothScroll hoverMebottom">Contact us</a>
                             </li>
                         </ul>
                     </div><!-- /.navbar-collapse-panel -->
@@ -102,6 +105,76 @@
             </div>
         </section>
         <!-- END About us -->
+
+        <!-- SECTION Pricing -->
+        <section id="pricing">
+            <div class="row animateOnScreen" data-offset="-50">
+                <div class="container">
+                    <h2 class="text-center">Pricing</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container animateOnScreen" data-offset="-50">
+                    <form id="pricing" action="" method="POST">
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="call-type">Call Type</label>
+                                <select class="form-control" id="call-type" name="call-type" required>
+                                    <option value="" selected>Select a Call Type</option>
+                                    <option value="TermLifeInsurance_"> Term Life Insurance</option>
+                                    <option value="HealthInsurance_"> Health Insurance</option>
+                                    <option value="AutoInsurance_"> Auto Insurance</option>
+                                    <option value="FinalExpenseInsurance_"> Final Expense Insurance</option>
+                                    <option value="MedSupp_"> Medical Supp Insurance</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="platform">Platform</label>
+                                <select class="form-control" id="platform" name="platform" required>
+                                    <option value="" selected>Select a Platform</option>
+                                    <option value="Google">Google</option>
+                                    <option value="Facebook">Facebook</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="geo">Geolocation</label>
+                                <select class="form-control" id="geo" name="geo" readonly required>
+                                    <option value="">Select a Platform</option>
+                                    <option value="USA" selected>USA</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="q_time">Qualifying Time</label>
+                                <select class="form-control" id="q_time" name="q_time" required>
+                                    <option value="" selected>Select a Time</option>
+                                    <option value="60">60 Seconds</option>
+                                    <option value="90">90 Seconds</option>
+                                    <option value="120">120 Seconds</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="income">Minimum Income</label>
+                                <input type="number" class="form-control" id="income" name="income" placeholder="Annual Salary ($)" />
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="age">Age</label>
+                                <input type="number" class="form-control" id="age" name="age" placeholder="Your Age" />
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="age">Final Price</label>
+                                <span class="final-price">$ <span id="price">0.00</span></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Create Insertion Order</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- END Pricing -->
 
         <!-- SECTION Contact us -->
         <section id="contact-us" class="last-section relative">
@@ -236,6 +309,7 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <!-- Custom scripts -->
         <script type="text/javascript" src="js/main.js?v=1"></script>
+        <script type="text/javascript" src="js/pricing.js?v=1"></script>
     </body>
 
 </html>

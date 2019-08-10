@@ -7,6 +7,7 @@
 
 html,
 body {
+    overflow-x: hidden;
     font-family: 'Poppins', sans-serif !important;
 }
 
@@ -541,6 +542,17 @@ form#contact-us {
     background: #d3d3d312;
 }
 
+form#pricing {
+    position: relative;
+    padding: 35px 50px;
+    width: 60%;
+    display: block;
+    margin: auto;
+    border: 1px solid #c8c9ca;
+    border-radius: 25px;
+    background: #fff;
+}
+
 @media screen and (max-width: 767px) {
     .nav.navbar-nav li a {
         color: #37517e !important;
@@ -555,4 +567,26 @@ form#contact-us {
         border: none;
         border-radius: none;
     }
+
+    form#pricing {
+        position: relative;
+        padding: 20px;
+        width: 100%;
+        display: block;
+        margin: auto;
+        border: none;
+        border-radius: none;
+    }
+}
+
+.float-left {
+    float: left;
+}
+
+.final-price {
+    width: 100%;
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    line-height: 43px;
 }
