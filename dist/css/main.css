@@ -120,6 +120,30 @@ nav.navbar-transparent a {
     background-repeat: no-repeat;
 }
 
+.bg-wave-top-white {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    background-image: url(../img/wave-bg-white-top.png);
+    background-position-y: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bg-wave-bottom-white {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    background-image: url(../img/wave-bg-white-bottom.png);
+    background-position-y: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .bg-wave-inverse {
     top: 0;
     left: 0;
@@ -540,6 +564,7 @@ form#contact-us {
     border: 1px solid #c8c9ca;
     border-radius: 25px;
     background: #d3d3d312;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.06), inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
 }
 
 form#pricing {
@@ -548,9 +573,10 @@ form#pricing {
     width: 60%;
     display: block;
     margin: auto;
-    border: 1px solid #c8c9ca;
+    /* border: 1px solid #c8c9ca; */
     border-radius: 25px;
     background: #fff;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.06), inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
 }
 
 @media screen and (max-width: 767px) {
