@@ -31,13 +31,13 @@ const onScreen = (elementsClassName, animationName) => {
         const pageHeight = $(window).height();
         let pageScroll = $('body').scrollTop();
         let pageScrollFull = pageScroll + pageHeight;
-        if (top > pageScroll && bottom < pageScrollFull - 50) {
+        if (top > pageScroll && bottom < pageScrollFull + 150) {
             $elem.addClass(`animated ${animationName}`);
         }
         $(document).on('scroll', function () {
             pageScroll = $(this).scrollTop();
             pageScrollFull = pageScroll + pageHeight;
-            if (top > pageScroll && bottom < pageScrollFull - 50) {
+            if (top > pageScroll && bottom < pageScrollFull + 150) {
                 if (!$elem.hasClass('animated')) {
                     $elem.addClass(`animated ${animationName}`);
                 }
