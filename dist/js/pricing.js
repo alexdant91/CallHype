@@ -486,6 +486,7 @@ $(document).ready(function () {
     }
 
     const $form = $('#pricing');
+    const $submit = $form.find('button[type="submit"]');
 
     const $callType = $('#call-type');
     const $platform = $('#platform');
@@ -493,81 +494,52 @@ $(document).ready(function () {
     const $q_time = $('#q_time');
     const $income = $('#income');
     const $age = $('#age');
+    const $full_name_pricing = $('#full_name_pricing');
+    const $email_pricing = $('#email_pricing');
 
     let callType = $callType.val(),
         platform = $platform.val(),
         geo = $geo.val(),
         q_time = $q_time.val(),
         income = $income.val(),
-        age = $age.val();
+        age = $age.val(),
+        full_name_pricing = $full_name_pricing.val(),
+        email_pricing = $email_pricing.val();
 
     $callType.on('change', function () {
         callType = $callType.val();
-        let price = calculatePricing(matrix, {
-            callType,
-            platform,
-            geo,
-            q_time,
-            income,
-            age
-        });
-        $('#price').html(parseFloat(price).toFixed(2))
     });
 
     $platform.on('change', function () {
         platform = $platform.val();
-        let price = calculatePricing(matrix, {
-            callType,
-            platform,
-            geo,
-            q_time,
-            income,
-            age
-        });
-        $('#price').html(parseFloat(price).toFixed(2))
     });
 
     $geo.on('change', function () {
         geo = $geo.val();
-        let price = calculatePricing(matrix, {
-            callType,
-            platform,
-            geo,
-            q_time,
-            income,
-            age
-        });
-        $('#price').html(parseFloat(price).toFixed(2))
     });
 
     $q_time.on('change', function () {
         q_time = $q_time.val();
-        let price = calculatePricing(matrix, {
-            callType,
-            platform,
-            geo,
-            q_time,
-            income,
-            age
-        });
-        $('#price').html(parseFloat(price).toFixed(2))
     });
 
     $income.on('keyup', function () {
         income = $income.val();
-        let price = calculatePricing(matrix, {
-            callType,
-            platform,
-            geo,
-            q_time,
-            income,
-            age
-        });
-        $('#price').html(parseFloat(price).toFixed(2))
     });
 
     $age.on('keyup', function () {
         age = $age.val();
+    });
+
+    $full_name_pricing.on('keyup', function () {
+        full_name_pricing = $full_name_pricing.val();
+    });
+
+    $email_pricing.on('keyup', function () {
+        email_pricing = $email_pricing.val();
+    });
+
+    $form.on('submit', function (e) {
+        e.preventDefault();
         let price = calculatePricing(matrix, {
             callType,
             platform,
@@ -576,12 +548,12 @@ $(document).ready(function () {
             income,
             age
         });
-        $('#price').html(parseFloat(price).toFixed(2))
+        $('#price').html(parseFloat(price).toFixed(2));
+        $submit.attr('id', 'calculate_price').attr('type', 'button').addClass('purple').html('Schedule')
     });
 
-    $form.on('submit', function (e) {
-        e.preventDefault();
-        // Do stuff with form data
-    })
+    $('body').on('click', '#calculate_price', function () {
+        window.open(`https://calendly.com/callhype/demo?name=${full_name_pricing}&email=${email_pricing}`, '_blank');
+    });
 
 });

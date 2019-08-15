@@ -2,7 +2,7 @@
 
 :root {
     --primary-color: #0D36BE;
-    --header-height: 750px;
+    --header-height: 950px;
 }
 
 html,
@@ -17,7 +17,7 @@ nav.navbar {
 }
 
 .navbar-brand img {
-    height: 25px;
+    height: 40px;
     width: auto;
 }
 
@@ -31,7 +31,7 @@ svg.bottom-bg {
 .centered {
     display: block;
     margin: auto;
-    margin-top: 250px;
+    margin-top: 200px;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -62,14 +62,15 @@ svg.bottom-bg {
 
 header {
     background-color: var(--primary-color);
-    height: var(--header-height);
+    height: auto;
     width: 100vw;
+    padding-bottom: 0;
 }
 
 header .header-title {
-    width: 600px;
+    width: 700px;
     z-index: 99;
-    max-width: 90%;
+    max-width: 95%;
     position: relative;
 }
 
@@ -92,14 +93,18 @@ header .header-title h3 {
 
 nav.navbar-transparent {
     color: white;
-    background: transparent;
-    position: absolute;
+    background: #113abc;
+    position: fixed;
     z-index: 999;
     width: 100%;
 }
 
 nav.navbar-transparent a {
     color: white !important;
+}
+
+nav .navbar-brand {
+    margin-top: 0;
 }
 
 .nav.navbar-nav li a {
@@ -174,6 +179,7 @@ nav.navbar-transparent a {
     bottom: 0px;
     color: white;
     height: 100%;
+    padding-bottom: 150px;
     left: 0px;
     position: relative;
     right: 0px;
@@ -552,7 +558,7 @@ section#about-us p {
 }
 
 .logo.logo-3 {
-    background-image: url(../img/logo_white_tx_md.png);
+    background-image: url(../img/logo_tx_white.png);
     background-position: center, center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -618,4 +624,60 @@ form#pricing {
     font-size: 40px;
     text-align: center;
     line-height: 43px;
+}
+
+.header-boxes {
+    position: relative;
+    height: auto;
+    width: 800px;
+    max-width: 100%;
+    margin-top: 50px !important;
+    margin: auto;
+}
+
+.header-boxes .header-box {
+    padding: 40px 25px;
+    background: white;
+    border-radius: 8px;
+}
+
+.header-boxes .header-box .header-box-image {
+    margin-top: 20px;
+}
+
+.product-image {
+    width: 80%;
+    height: auto;
+    max-width: 170px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.product-image.left {
+    float: left;
+}
+
+.product-image.right {
+    float: right;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.product-title {
+    margin: 0;
+    font-size: 22px;
+    line-height: 32px;
+    padding: 25px;
+}
+
+.product-title h3 {
+    font-size: 26px;
+    margin: 0 0 20px 0;
+}
+
+.purple {
+    background-color: #9A33D6 !important;
 }
