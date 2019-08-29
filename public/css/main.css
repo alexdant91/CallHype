@@ -681,3 +681,14 @@ form#pricing {
 .purple {
     background-color: #9A33D6 !important;
 }
+
+.custom-input #age_1 {
+    float: left;
+    width: 48%;
+}
+
+.custom-input #age_2 {
+    float: left;
+    width: 48%;
+    margin-left: 4%;
+}

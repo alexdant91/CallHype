@@ -2,6 +2,7 @@ let submitted = false;
 const quotation = JSON.parse(localStorage.getItem('q'));
 if (quotation) {
     $('.toRemove').remove();
+    $('.custom-submit').attr('type', 'submit').prop('data-toggle', false).prop('data-target', false).removeClass('purple').html('Calculate Price');
     submitted = true;
 }
 
@@ -69,19 +70,35 @@ const onScreen = (elementsClassName, animationName) => {
         const top = $elem.offset().top;
         const bottom = top + $elem.height();
         const pageHeight = $(window).height();
+        const pageWidth = $(window).width();
         let pageScroll = $('body').scrollTop();
         let pageScrollFull = pageScroll + pageHeight;
-        if (top > pageScroll && bottom < pageScrollFull + offset) {
-            $elem.addClass(`animated ${animationName}`);
-        }
-        $(document).on('scroll', function () {
-            pageScroll = $(this).scrollTop();
-            pageScrollFull = pageScroll + pageHeight;
+        console.log(pageWidth)
+        if (pageWidth > 980) {
             if (top > pageScroll && bottom < pageScrollFull + offset) {
-                if (!$elem.hasClass('animated')) {
-                    $elem.addClass(`animated ${animationName}`);
-                }
+                $elem.addClass(`animated ${animationName}`);
             }
-        });
+            $(document).on('scroll', function () {
+                pageScroll = $(this).scrollTop();
+                pageScrollFull = pageScroll + pageHeight;
+                if (top > pageScroll && bottom < pageScrollFull + offset) {
+                    if (!$elem.hasClass('animated')) {
+                        $elem.addClass(`animated ${animationName}`);
+                    }
+                }
+            });
+        } else {
+            if (top > pageScroll) {
+                $elem.addClass(`animated ${animationName}`);
+            }
+            $(document).on('scroll', function () {
+                pageScroll = $(this).scrollTop();
+                if (top > pageScroll) {
+                    if (!$elem.hasClass('animated')) {
+                        $elem.addClass(`animated ${animationName}`);
+                    }
+                }
+            });
+        }
     });
 }

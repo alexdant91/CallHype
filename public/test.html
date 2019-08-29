@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CallHype - Customer aquisition platform</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <!-- Custom styles -->
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <!-- Normalize -->
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <!-- Media -->
+        <link rel="stylesheet" type="text/css" href="css/media.css" />
+        <!-- Animations -->
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <!-- FontAwesome -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" />
+
+    </head>
+
+    <body>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="form-group col-lg-6 toRemove">
+                            <label for="full_name_pricing">Full Name</label>
+                            <input type="text" class="form-control" id="full_name_pricing" name="full_name_pricing" placeholder="John Doe" required />
+                        </div>
+                        <div class="form-group col-lg-6 toRemove">
+                            <label for="email_pricing">Email</label>
+                            <input type="email" class="form-control" id="email_pricing" name="email_pricing" placeholder="john@gmail.com" required />
+                        </div>
+                        <div class="form-group col-lg-6 toRemove">
+                            <label for="phone_pricing">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone_pricing" name="phone_pricing" placeholder="(123)-456-7890" required />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <!-- Bootstrap -->
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <!-- Custom scripts -->
+        <script type="text/javascript" src="js/firebase.js?v=6"></script>
+        <script type="text/javascript" src="js/main.js?v=6"></script>
+        <script type="text/javascript" src="js/pricing.js?v=6"></script>
+    </body>
+
+</html>

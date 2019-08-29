@@ -231,7 +231,7 @@
                                     <input type="number" class="form-control" id="to_age" name="to_age" placeholder="To" />
                                 </div> -->
                                 <label for="age">Age Range</label>
-                                <select class="form-control" id="age" name="age" required>
+                                <!-- <select class="form-control" id="age" name="age" required>
                                     <option value="" selected>Select a Range</option>
                                     <option value="0_120">0-18</option>
                                     <option value="0_120">19-25</option>
@@ -239,23 +239,11 @@
                                     <option value="0_120">36-50</option>
                                     <option value="0_120">51-65</option>
                                     <option value="0_120">65+</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-lg-6 toRemove">
-                                <label for="full_name_pricing">Full Name</label>
-                                <input type="text" class="form-control" id="full_name_pricing" name="full_name_pricing" placeholder="John Doe" required />
-                            </div>
-                            <!-- <div class="form-group col-lg-6">
-                                <label for="company_pricing">Company</label>
-                                <input type="text" class="form-control" id="company_pricing" name="company_pricing" placeholder="National Insurance Compa" required />
-                            </div> -->
-                            <div class="form-group col-lg-6 toRemove">
-                                <label for="email_pricing">Email</label>
-                                <input type="email" class="form-control" id="email_pricing" name="email_pricing" placeholder="john@gmail.com" required />
-                            </div>
-                            <div class="form-group col-lg-6 toRemove">
-                                <label for="phone_pricing">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone_pricing" name="phone_pricing" placeholder="(123)-456-7890" required />
+                                </select> -->
+                                <div class="custom-input">
+                                    <input type="number" class="form-control" name="age_1" id="age_1" placeholder="From">
+                                    <input type="number" class="form-control" name="age_2" id="age_2" placeholder="To">
+                                </div>
                             </div>
                             <div class="form-group col-lg-6">
                                 <label for="age">Final Price</label>
@@ -264,7 +252,7 @@
                         </div>
                         <div class="row">
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary" id="send_pricing_form">Calculate Price</button>
+                                <button type="button" class="btn btn-primary custom-submit">Calculate Price</button>
                             </div>
                         </div>
                     </form>
@@ -370,6 +358,34 @@
             </div>
         </footer>
         <!-- END Footer -->
+
+        <!-- Modal -->
+        <div class="modal fade toRemove" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row relative">
+                            <div class="form-group col-lg-6">
+                                <label for="full_name_pricing">Full Name</label>
+                                <input type="text" class="form-control" id="full_name_pricing" name="full_name_pricing" placeholder="John Doe" required />
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="email_pricing">Email</label>
+                                <input type="email" class="form-control" id="email_pricing" name="email_pricing" placeholder="john@gmail.com" required />
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label for="phone_pricing">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone_pricing" name="phone_pricing" placeholder="(123)-456-7890" required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="send_pricing_form">Calculate Price</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- jQuery -->
         <script type="text/javascript" src="js/jquery.js"></script>
